@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PStatus::Application.config.secret_token = '80c42e75c218dadd74b29c5f8d92428bd08c9c8090159d0ada7af09f4fd9bab8c95ec755ee96df182a7ea90dc2a71306bfb93ea68b1a391bf3fd7cddb1e6ef38'
+PStatus::Application.config.secret_token = '02ab386be32d6db91c53a3ca6cae3d1f74cec354c59f42ee78c565944fdab2c54334137e383359898a63d64b224008e1f7f6c92c4656d796aa83ac0ec0338448'
