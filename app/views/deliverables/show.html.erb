@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Task sl:</b>
+  <%= @deliverable.task_sl %>
+</p>
+
+<p>
+  <b>Task type:</b>
+  <%= @deliverable.task_type %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @deliverable.project %>
+</p>
+
+<p>
+  <b>Ticket:</b>
+  <%= @deliverable.ticket %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @deliverable.description %>
+</p>
+
+<p>
+  <b>Estimated task time:</b>
+  <%= @deliverable.estimated_task_time %>
+</p>
+
+<p>
+  <b>Estimated task resource time:</b>
+  <%= @deliverable.estimated_task_resource_time %>
+</p>
+
+<p>
+  <b>Cumulative time taskwise:</b>
+  <%= @deliverable.cumulative_time_taskwise %>
+</p>
+
+<p>
+  <b>Cumulative time resourcewise:</b>
+  <%= @deliverable.cumulative_time_resourcewise %>
+</p>
+
+<p>
+  <b>Week projected effort:</b>
+  <%= @deliverable.week_projected_effort %>
+</p>
+
+<p>
+  <b>Week actual effort:</b>
+  <%= @deliverable.week_actual_effort %>
+</p>
+
+<p>
+  <b>Qa release:</b>
+  <%= @deliverable.qa_release %>
+</p>
+
+<p>
+  <b>Production release:</b>
+  <%= @deliverable.production_release %>
+</p>
+
+<p>
+  <b>Release:</b>
+  <%= @deliverable.release %>
+</p>
+
+<p>
+  <b>Work list:</b>
+  <%= @deliverable.work_list %>
+</p>
+
+
+<%= link_to 'Edit', edit_deliverable_path(@deliverable) %> |
+<%= link_to 'Back', deliverables_path %>

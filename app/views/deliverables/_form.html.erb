@@ -1,0 +1,77 @@
+<%= form_for(@deliverable) do |f| %>
+  <% if @deliverable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deliverable.errors.count, "error") %> prohibited this deliverable from being saved:</h2>
+
+      <ul>
+      <% @deliverable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :task_sl %><br />
+    <%= f.number_field :task_sl %>
+  </div>
+  <div class="field">
+    <%= f.label :task_type %><br />
+    <%= f.text_field :task_type %>
+  </div>
+  <div class="field">
+    <%= f.label :project %><br />
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :ticket %><br />
+    <%= f.number_field :ticket %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_task_time %><br />
+    <%= f.text_field :estimated_task_time %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_task_resource_time %><br />
+    <%= f.text_field :estimated_task_resource_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cumulative_time_taskwise %><br />
+    <%= f.text_field :cumulative_time_taskwise %>
+  </div>
+  <div class="field">
+    <%= f.label :cumulative_time_resourcewise %><br />
+    <%= f.text_field :cumulative_time_resourcewise %>
+  </div>
+  <div class="field">
+    <%= f.label :week_projected_effort %><br />
+    <%= f.text_field :week_projected_effort %>
+  </div>
+  <div class="field">
+    <%= f.label :week_actual_effort %><br />
+    <%= f.text_field :week_actual_effort %>
+  </div>
+  <div class="field">
+    <%= f.label :qa_release %><br />
+    <%= f.date_select :qa_release %>
+  </div>
+  <div class="field">
+    <%= f.label :production_release %><br />
+    <%= f.date_select :production_release %>
+  </div>
+  <div class="field">
+    <%= f.label :release %><br />
+    <%= f.text_field :release %>
+  </div>
+  <div class="field">
+    <%= f.label :work_list %><br />
+    <%= f.text_field :work_list %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

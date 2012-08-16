@@ -1,4 +1,6 @@
 PStatus::Application.routes.draw do
+  resources :deliverables
+
   authenticated :user do
     root :to => 'home#index'
   end

@@ -1,0 +1,51 @@
+<h1>Listing deliverables</h1>
+
+<table>
+  <tr>
+    <th>Task sl</th>
+    <th>Task type</th>
+    <th>Project</th>
+    <th>Ticket</th>
+    <th>Description</th>
+    <th>Estimated task time</th>
+    <th>Estimated task resource time</th>
+    <th>Cumulative time taskwise</th>
+    <th>Cumulative time resourcewise</th>
+    <th>Week projected effort</th>
+    <th>Week actual effort</th>
+    <th>Qa release</th>
+    <th>Production release</th>
+    <th>Release</th>
+    <th>Work list</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @deliverables.each do |deliverable| %>
+  <tr>
+    <td><%= deliverable.task_sl %></td>
+    <td><%= deliverable.task_type %></td>
+    <td><%= deliverable.project %></td>
+    <td><%= deliverable.ticket %></td>
+    <td><%= deliverable.description %></td>
+    <td><%= deliverable.estimated_task_time %></td>
+    <td><%= deliverable.estimated_task_resource_time %></td>
+    <td><%= deliverable.cumulative_time_taskwise %></td>
+    <td><%= deliverable.cumulative_time_resourcewise %></td>
+    <td><%= deliverable.week_projected_effort %></td>
+    <td><%= deliverable.week_actual_effort %></td>
+    <td><%= deliverable.qa_release %></td>
+    <td><%= deliverable.production_release %></td>
+    <td><%= deliverable.release %></td>
+    <td><%= deliverable.work_list %></td>
+    <td><%= link_to 'Show', deliverable %></td>
+    <td><%= link_to 'Edit', edit_deliverable_path(deliverable) %></td>
+    <td><%= link_to 'Destroy', deliverable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Deliverable', new_deliverable_path %>

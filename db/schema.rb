@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815185606) do
+ActiveRecord::Schema.define(:version => 20120816081427) do
+
+  create_table "deliverables", :force => true do |t|
+    t.integer  "task_sl"
+    t.string   "task_type"
+    t.string   "project"
+    t.integer  "ticket"
+    t.text     "description"
+    t.decimal  "estimated_task_time",          :precision => 10, :scale => 0
+    t.decimal  "estimated_task_resource_time", :precision => 10, :scale => 0
+    t.decimal  "cumulative_time_taskwise",     :precision => 10, :scale => 0
+    t.decimal  "cumulative_time_resourcewise", :precision => 10, :scale => 0
+    t.decimal  "week_projected_effort",        :precision => 10, :scale => 0
+    t.decimal  "week_actual_effort",           :precision => 10, :scale => 0
+    t.date     "qa_release"
+    t.date     "production_release"
+    t.string   "release"
+    t.string   "work_list"
+    t.datetime "created_at",                                                  :null => false
+    t.datetime "updated_at",                                                  :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
